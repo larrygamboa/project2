@@ -9,7 +9,10 @@ A Student Portal made using PHP with MySQL.
 * To make the life of a student a bit more easy, we made 'Student Portal', a simple yet useful app to help the student push their limit a bit more further. 
 * With the Student Portal , our goal is to help you find and learn the information and ensure a smooth, seamless experience along the way. That’s why we’ve established the Student Portal. Here, you can view your progress and register for your classes online.
 
-# The application gives you the following options:
+## Features
+### Roles
+This portal is for  ***Students***. Let's move on!
+### Assignments
 
 ## Installation
 ---

@@ -18,7 +18,7 @@ This portal is for  ***Students***. Let's move on!
 * Many news keep coming up and this is the place to dump all of them! These include the auto-generated announcements for new assignments for student, official announcements etc. Keep checking for updates so that you do not miss any of them!
 
 ### Profile
-* View your profile, update your contact details, change your password and update your profile picture. There is nothing else here!
+* View your profile, update your contact details, change your password and update your profile picture.
 ### Assignments:
 
 ## Installation:

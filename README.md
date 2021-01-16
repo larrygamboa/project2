@@ -34,8 +34,8 @@ This portal is for  ***Students***. Let's move on!
 	<summary><b>Student</b></summary>
 	<p>
 		<ul>
-			<li>Take up an assignment <i>online</i> with timer set in server</li>
-			<li>Analyse his/her performance after taking up the assignment</li>
+			<li>Take up an assignment <i>online</i> and watch your progress.</li>
+			<li></li>
 		</ul>
 	</p>
 </details>

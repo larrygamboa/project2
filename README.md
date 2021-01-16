@@ -13,7 +13,7 @@ A Student Portal made using PHP with MySQL.
 ### Roles:
 This portal is for  ***Students***. Let's move on!
 ### Messaging:
-Make friends, interact with your faculties and get your doubts cleared! Its a nice place for some fun too, but beaware that the messages aren't encrypted and can be seen by the Admin at any time!
+Make friends, interact with your faculties and get your doubts cleared! Its a nice place for some fun too, but be aware that the messages aren't encrypted and can be seen by the Admin at any time!
 ### Announcements:
 Many news keep coming up and this is the place to dump all of them! These include the auto-generated announcements for new assignments for student, official announcements etc. Keep checking for updates so that you do not miss any of them!
 

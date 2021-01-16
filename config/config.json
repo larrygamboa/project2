@@ -1,14 +1,18 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
+    "password": "l@rG020979!",
+=======
     "password": "27qweasd",
+>>>>>>> 5bab5fa2fd987e3432142a44c27089a3476eef5b
     "database": "passport_demo",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "l@rG020979!",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"

@@ -20,6 +20,25 @@ This portal is for  ***Students***. Let's move on!
 ### Profile
 * View your profile, update your contact details, change your password and update your profile picture.
 ### Assignments:
+<details>
+	<summary><b>Admin</b></summary>
+	<p>
+		<ul>
+			<li>Accept/Reject Assignment requests from Students</li>
+			<li>Add an assignment for a batch</li>
+			<li>Make changes to timings and key</li>
+		</ul>
+	</p>
+</details>
+<details>
+	<summary><b>Student</b></summary>
+	<p>
+		<ul>
+			<li>Take up an assignment <i>online</i> and watch your progress.</li>
+			<li></li>
+		</ul>
+	</p>
+</details>
 
 ## Installation:
 ---

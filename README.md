@@ -1,6 +1,6 @@
 <div align="center"> <img src="http://res.cloudinary.com/muhimen/image/upload/v1604122377/student_portal_logo.png" alt="logo"> 
   
-  ![exec](https://img.shields.io/badge/Executable-Windows%20%7C%20Linux-green.png)  ![Platforms](https://img.shields.io/badge/Platforms-Windows%20%7C%20Mac%20%7C%20Linux-blue.png)    ![GitHub repo size](https://img.shields.io/github/repo-size/fireplank/student-portal)  [![Discord](https://img.shields.io/discord/713785142597910549?label=Discord)](https://discord.gg/K2Cf6ma)
+ [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) ![exec](https://img.shields.io/badge/Executable-Windows%20%7C%20Linux-green.png)  ![Platforms](https://img.shields.io/badge/Platforms-Windows%20%7C%20Mac%20%7C%20Linux-blue.png)    ![GitHub repo size](https://img.shields.io/github/repo-size/fireplank/student-portal)  [![Discord](https://img.shields.io/discord/713785142597910549?label=Discord)](https://discord.gg/K2Cf6ma)
 
 </div>
 

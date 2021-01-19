@@ -29,6 +29,6 @@ module.exports = function(app) {
       var hbsObject = {name: 'vanilla', price: 10, awesomeness: 3};
       res.render('members', hbsObject);
     
-    res.sendFile(path.join(__dirname, "../public/members.handlebars"));
+    // res.sendFile(path.join(__dirname, "../public/layout/members.handlebars"));
   });
 };

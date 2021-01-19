@@ -36,7 +36,7 @@ module.exports = function(app) {
       //   console.log(dbPost);
       //   res.json(dbPost);
       // });
-      var hbsObject = {name: 'vanilla', price: 10, awesomeness: 3};
+      var hbsObject = {name: 'Anastasia', university: "UCSD"};
       res.render('members', hbsObject);
     console.log("*****************", hbsObject)
     // res.sendFile(path.join(__dirname, "../public/layout/members.handlebars"));

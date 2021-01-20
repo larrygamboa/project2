@@ -9,7 +9,6 @@ module.exports = function(app) {
   app.get("/", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
-      
       res.redirect("/members");
     }
     res.sendFile(path.join(__dirname, "../public/signup.html"));
@@ -26,19 +25,12 @@ module.exports = function(app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, (req, res) => {
-      // db.User.findOne({
-      //   where: {
-      //     id: req.params.id,
-       
-      //   include: [db.Author] 
-      // },
-      // }).then(function(dbPost) {
-      //   console.log(dbPost);
-      //   res.json(dbPost);
-      // });
-      var hbsObject = {name: 'Anastasia', university: "UCSD"};
-      res.render('members', hbsObject);
-    console.log("*****************", hbsObject)
-    // res.sendFile(path.join(__dirname, "../public/layout/members.handlebars"));
+    db.Topics.findAll({}).then(function(dbTopics) {
+      db.Activities.findAll({}).then(function(dbActivities) { 
+
+           res.render("members", {Topics: dbTopics, Activities: dbActivities})
+     console.log("**************",dbActivities)
+      })
+  });
   });
 };

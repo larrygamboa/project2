@@ -32,6 +32,9 @@
 	</div>
 	<br>
 	<div class="row task-container justify-content-center">
+	
+	
+	
 		<div class="col-md-5">
 			<h3>TOPICS:</h3>
 			<ul>
@@ -40,7 +43,7 @@
 				{{#unless this.dataValues.t_condition}}
 				<li>
 					<h5>{{this.dataValues.id}}.{{this.dataValues.topic_name}}
-						<button type='submit' id={{this.dataValues.id}} class="eat-burger-btn btn btn-danger"
+						<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-danger"
 							data-id="{{this.dataValues.id}}">COMPLETE!</button>
 					</h5>
 				</li>
@@ -99,6 +102,23 @@
 				{{#if this.dataValues.a_condition}}
 				<li>
 					<h5>{{this.dataValues.id}}.{{this.dataValues.activity_name}}
+					</h5>
+
+				</li>
+				{{/if}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+
+		<div class="row">
+		<div class="col-md-5">
+			<h3>COMPLETE TOPICS:</h3>
+			<ul>
+				{{#each Topics}}
+				{{#if this.dataValues.t_condition}}
+				<li>
+					<h5>{{this.dataValues.id}}.{{this.dataValues.topic_name}}
 					</h5>
 
 				</li>

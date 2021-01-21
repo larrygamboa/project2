@@ -29,8 +29,37 @@ module.exports = function(app) {
       db.Activities.findAll({}).then(function(dbActivities) { 
 
            res.render("members", {Topics: dbTopics, Activities: dbActivities})
-     console.log("**************",dbActivities)
+    //  console.log("**************",dbActivities)
       })
   });
   });
+
+
+  app.post("/api/insertTopic", function(req, res) {
+    db.Topics.create({topic_name: req.body.name, t_condition: false}).then(function() {
+      console.log("*************", req.body)
+        res.redirect("/members");
+      });
+  });
+  
+  app.post("/api/insertActivity", function(req, res) {
+    db.Activities.create({activity_name: req.body.name, a_condition: false}).then(function() {
+      console.log("*************", req.body)
+        res.redirect("/members");
+      });
+  });
+
+ 
+  app.put("/api/updateTopic", function(req, res) {
+    db.Topics.update(
+      {t_condition: true},
+      {
+        where: {
+          id: req.body.id
+        }
+      }).then(function() {
+        res.redirect("/members");
+    });
+  });
 };
+

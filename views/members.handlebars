@@ -1,47 +1,50 @@
- <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
-    </div>
-  </div>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/logout">
+				Logout
+			</a>
+		</div>
+	</div>
 </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome 
-			{{!-- {{name}} --}}
-             <span class="member-name"></span></h2>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-{{!-- header and image containers --}}
-	
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<h2>Welcome
+				{{!-- {{name}} --}}
+				<span class="member-name"></span>
+			</h2>
+		</div>
+	</div>
+</div>
+<div class="container">
+	{{!-- header and image containers --}}
+
 	<div class="row justify-content-center">
 		<div class="col-md-10">
 			<h1 class="text-center">Track your progress!</h1>
-      <br>
-      <div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-</div>
+			<br>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+					aria-valuemax="100">25%</div>
+			</div>
 		</div>
 	</div>
-<br>
-	<div class="row burger-container justify-content-center">
+	<br>
+	<div class="row task-container justify-content-center">
 		<div class="col-md-5">
 			<h3>TOPICS:</h3>
-			<ul> 
+			<ul>
 				{{#each Topics}}
-									
-					{{#unless this.dataValues.t_condition}}
-						<li>
-							<h5>{{this.dataValues.id}}.{{this.dataValues.topic_name}}
-									<button type='submit' id={{this.dataValues.id}} class="eat-burger-btn btn btn-danger" data-id="{{this.dataValues.id}}">DEVOUR!</button>
-							</h5>
-						</li>
-					{{/unless}}
+
+				{{#unless this.dataValues.t_condition}}
+				<li>
+					<h5>{{this.dataValues.id}}.{{this.dataValues.topic_name}}
+						<button type='submit' id={{this.dataValues.id}} class="eat-burger-btn btn btn-danger"
+							data-id="{{this.dataValues.id}}">COMPLETE!</button>
+					</h5>
+				</li>
+				{{/unless}}
 				{{/each}}
 			</ul>
 		</div>
@@ -50,32 +53,62 @@
 			<h3>ACTIVITIES:</h3>
 			<ul>
 				{{#each Activities}}
-					{{#unless this.dataValues.a_condition}}
-						<li>
-							<h5>{{this.dataValues.id}}.{{this.dataValues.activity_name}}
-									<button type='submit' id={{this.dataValues.id}} class="eat-burger-btn btn btn-danger" data-id="{{this.dataValues.id}}">DEVOUR!</button>
-							</h5>
-						
-						</li>
-					{{/unless}}
+				{{#unless this.dataValues.a_condition}}
+				<li>
+					<h5>{{this.dataValues.id}}.{{this.dataValues.activity_name}}
+						<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-danger"
+							data-id="{{this.dataValues.id}}">COMPLETE!</button>
+					</h5>
+
+				</li>
+				{{/unless}}
 				{{/each}}
 			</ul>
 		</div>
+
 	</div>
 	<br>
 	<div class="row">
 		<div class="col-md-12 text-center">
-			<form class="create-update-form" action="burgers/insertOne" method="POST">
+			<form class="create-update-form" action="api/insertTopic" method="POST">
 				<div>
 					<textarea type="text" placeholder="Type..." name="name"></textarea><br>
-					<button class="btn btn-danger" type="submit">Add to the menu</button>
+					<button class="btn btn-danger" type="submit">Add topic</button>
 				</div>
 			</form>
 		</div>
 	</div>
+
+	<br>
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<form class="create-update-form" action="api/insertActivity" method="POST">
+				<div>
+					<textarea type="text" placeholder="Type..." name="name"></textarea><br>
+					<button class="btn btn-danger" type="submit">Add activity</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-5">
+			<h3>COMPLETE ACTIVITIES:</h3>
+			<ul>
+				{{#each Activities}}
+				{{#if this.dataValues.a_condition}}
+				<li>
+					<h5>{{this.dataValues.id}}.{{this.dataValues.activity_name}}
+					</h5>
+
+				</li>
+				{{/if}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
 </div>
 
-  {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script> --}}
-
-   
+{{!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/members.js"></script> --}}

@@ -1,3 +1,20 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1.text {
+  font-family: "Libre Baskerville", serif;
+  line-height: 0.75em;
+  margin: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+span.h1-small {
+  font-size: 0.5em;
+  letter-spacing: 0.75em;
+}
+
 form.signup,
 form.login {
   margin-top: 50px;
@@ -16,40 +33,62 @@ form.login {
   color: rgb(230, 227, 227);
 }
 
-.text2 {
-  color: rgb(189, 182, 182);
+p.text2 {
+  /* color: rgb(189, 182, 182); */
+  color: #fff;
+  font-family: "Libre Baskerville", serif;
+  font-size: 2em;
+  margin-top: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btn, .btn:hover {
+  border-width: 0;
 }
 
 .colorY {
   background-color: rgb(255, 240, 34);
+  min-height: 640px;
+  padding: 4em;
 }
 
-.colorG {
-  background-color: rgb(104, 255, 34);
+.colorW {
+  background-color: #fff;
+  min-height: 640px;
+  padding: 4em;
 }
+
+/* .colorG {
+  background-color: rgb(104, 255, 34);
+} */
 
 .footer {
   background-color: teal;
 }
 
 /* Popup form styles */
-.container  {
+.container {
   height: 100%;
-width: 100%;
-/* background-color: #000; */
+  width: 100%;
+  background-color: #000;
 }
 
 .container-box {
-display: inline-block; 
-padding: 10px; 
-background: rgba(255, 255, 255, .8);
-border: 1px solid #fff;	
-position: fixed;
-bottom: 0;
-right: 0;
-transform-origin: bottom right;
+  display: inline-block;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #fff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform-origin: bottom right;
+}
+
+.container-box .btn {
+  font-size: 2em;
 }
 
 .modal-content {
-background: rgba(255, 255, 255);	
+  background: rgba(255, 255, 255);
 }

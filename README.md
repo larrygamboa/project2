@@ -1,6 +1,7 @@
 <div align="center"> <img src="http://res.cloudinary.com/muhimen/image/upload/v1604122377/student_portal_logo.png" alt="logo"> 
 </div>
 
+
 # Student Web Development Portal
 
  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
@@ -21,6 +22,7 @@ To run the app on a local machine the user needs to open the Workbench first and
 DROP DATABASE IF EXISTS passport_demo;
 CREATE DATABASE passport_demo;
 Inside the folder `Config` there is a file `config.json` with a json object containing information about MySQL connection: username, password, name of the database. The name of the database is the same name has to match with the one in the Workbench, and the user has to make sure to put in his username and password to access it.
+
 
 ## Usage 
 

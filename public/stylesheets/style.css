@@ -43,7 +43,8 @@ p.text2 {
   text-transform: uppercase;
 }
 
-.btn, .btn:hover {
+.btn,
+.btn:hover {
   border-width: 0;
 }
 
@@ -65,6 +66,21 @@ p.text2 {
 
 .footer {
   background-color: teal;
+}
+
+/* Login page styles */
+body#login-page {
+  background-color: #000;
+}
+
+form.login {
+  background-color: rgb(255, 240, 34);
+  padding: 3em;
+  border-radius: 0.5em;
+}
+
+form.login h2 {
+  margin: 0 0 20px;
 }
 
 /* Popup form styles */

@@ -1,67 +1,32 @@
 <div align="center"> <img src="http://res.cloudinary.com/muhimen/image/upload/v1604122377/student_portal_logo.png" alt="logo"> 
-  
- [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) ![exec](https://img.shields.io/badge/Executable-Windows%20%7C%20Linux-green.png)  ![Platforms](https://img.shields.io/badge/Platforms-Windows%20%7C%20Mac%20%7C%20Linux-blue.png)    ![GitHub repo size](https://img.shields.io/github/repo-size/fireplank/student-portal)  [![Discord](https://img.shields.io/discord/713785142597910549?label=Discord)](https://discord.gg/K2Cf6ma)
-
 </div>
 
-# Student Portal -Web Development App
-A Student Portal made using PHP with MySQL.
-* To make the life of a student a bit more easy, we made 'Student Portal', a simple yet useful app to help the student push their limit a bit more further. 
-* With the Student Portal , our goal is to help you find and learn the information and ensure a smooth, seamless experience along the way. That’s why we’ve established the Student Portal. Here, you can view your progress and register for your classes online.
+# Student Web Development Portal
 
-## Features:
-### Roles:
-This portal is for  ***Students***. Let's move on!
-### Messaging:
-* Make friends, interact with your faculties and get your doubts cleared! Its a nice place for some fun too, but be aware that the messages aren't encrypted and can be seen by the Admin at any time!
-### Announcements:
-* Many news keep coming up and this is the place to dump all of them! These include the auto-generated announcements for new assignments for student, official announcements etc. Keep checking for updates so that you do not miss any of them!
+ ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-### Profile
-* View your profile, update your contact details, change your password and update your profile picture.
-### Assignments:
-<details>
-	<summary><b>Admin</b></summary>
-	<p>
-		<ul>
-			<li>Accept/Reject Assignment requests from Students</li>
-			<li>Add an assignment for a batch</li>
-			<li>Make changes to timings and key</li>
-		</ul>
-	</p>
-</details>
-<details>
-	<summary><b>Student</b></summary>
-	<p>
-		<ul>
-			<li>Take up an assignment <i>online</i> and watch your progress.</li>
-			<li></li>
-		</ul>
-	</p>
-</details>
+## Table of Contents
+  * [Description](#Description)
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [License](#License)
 
-## Installation:
----
-1. 
-2. 
-3. 
-## Usage
----
-1. 
-2. 
-   
-3. Follow prompt if presented:
+## Description
+This application allows students to create an account by signing up with an email and a password and then log into the account to access the information about topics and activities that they can mark as "completed" and the percentage of completion will be display in the progress bar. The app implements a variety of technologies and programming languages such as JavaScript, jQuery, HTML, CSS, SQL, API requests, ORM, Ajax calls, Express.js, Node.js, Passport.js, Sequelize and Bcrypt. The repository is organized according to MVC framework standarts. This full-stack app also introduces simple and intuitive interface.
 
-   
-## Tools & Resources:
----
-* 
-* 
-    ### Dependencies
-    ---
-    * 
-   * 
-    *
-    
+## Installation
+To install this application the user will need to install Node.js and MySQL Workbench, then initialize the folder containing the application by typing `npm init -y` and `npm i` in the command line to install required dependencies such as `mysql, sequelize, fs, path, bcrypt, express, passport` mentioned in the `package.json` file that holds various metadata that's relevant to the project. Installing those modules will produce the node_modules folder that is like a cache for the external modules and Nodejs is trained to look for them there.
+ <br>
+To run the app on a local machine the user needs to open the Workbench first and run this sequel script:
+DROP DATABASE IF EXISTS passport_demo;
+CREATE DATABASE passport_demo;
+Inside the folder `Config` there is a file `config.json` with a json object containing information about MySQL connection: username, password, name of the database. The name of the database is the same name has to match with the one in the Workbench, and the user has to make sure to put in his username and password to access it.
 
-#### Do not forget to take up an assignment as a student!
+## Usage 
+
+How the student uses the app? Login, add topics, add activities, complete then, mention progress bar and nodemailer
+
+
+### Roles
+
+Collaboration, who did what

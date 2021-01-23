@@ -29,10 +29,10 @@ How the student uses the app? Login, add topics, add activities, complete then, 
 
 ### Contributors
 
-* Larry Gamboa
-* Anastasia Ivaschenko
-* Ivan Sillas-Navarro
-* Victor Bunduc
+* Larry Gamboa [click here](https://github.com/larrygamboa).
+* Anastasia Ivaschenko [click here](https://github.com/anaiva27).
+* Ivan Sillas-Navarro [click here](https://github.com/Xicano619).
+* Victor Bunduc [click here](https://github.com/victorbunduc).
 
 ## License
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)

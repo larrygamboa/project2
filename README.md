@@ -27,9 +27,12 @@ Inside the folder `Config` there is a file `config.json` with a json object cont
 How the student uses the app? Login, add topics, add activities, complete then, mention progress bar and nodemailer
 
 
-### Roles
+### Contributors
 
-Collaboration, who did what
+* Larry Gamboa
+* Anastasia Ivaschenko
+* Ivan Sillas-Navarro
+* Victor Bunduc
 
 ## License
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)

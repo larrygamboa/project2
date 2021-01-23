@@ -1,0 +1,48 @@
+.container.containerMembers.container-fluid {
+    margin: 0;
+    padding: 0;
+    max-width: unset;
+}
+
+body {
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+  }
+
+.head1 {
+    background-color: black;
+    color: white;
+  }
+
+  
+h1.text {
+    font-family: "Libre Baskerville", serif;
+    line-height: 0.75em;
+    margin: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  span.h1-small {
+    font-size: 0.5em;
+    letter-spacing: 0.75em;
+  }
+
+  .text {
+    color: rgb(230, 227, 227);
+  }
+  
+  p.text2 {
+    /* color: rgb(189, 182, 182); */
+    color: #fff;
+    font-family: "Libre Baskerville", serif;
+    font-size: 2em;
+    margin-top: 1em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .row.scroll {
+  margin: 0 !important;
+    flex-direction: column;
+  }

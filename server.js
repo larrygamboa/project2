@@ -3,7 +3,7 @@ const express = require("express");
 const session = require("express-session");
 var exphbs = require("express-handlebars");
 const nodemailer = require("nodemailer");
-// require("dotenv").config();
+require("dotenv").config();
 
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
@@ -38,10 +38,14 @@ const transporter = nodemailer.createTransport({
   // port: 587,
   // logger: true,
   // debug: true,
+
+  // host: "smtp.gmail.com",
+  // port: 465,
+  // secure: true,
   service: "gmail",
   auth: {
-    user: process.env.EMAIL_EMAIL,
-    pass: process.env.EMAIL_PASS,
+    user: process.env.EMAIL,
+    pass: process.env.PASS,
   },
   tls: {
     // do not fail on invalid certs
@@ -74,7 +78,7 @@ transporter.sendMail(mailOptions, function(error, info) {
   console.log("Message sent: " + info.response);
 });
 
-app.post("/api/signup", (req, res) => {
+app.post("/", (req, res) => {
   db.User.create({
     // email: req.body.email,
     // password: req.body.password,
@@ -86,7 +90,7 @@ app.post("/api/signup", (req, res) => {
     message: req.body.message
   })
     .then(() => {
-      res.redirect(307, "/api/login");
+      res.redirect(307, "/api/signup");
       const mailOptions = {
         from: "codebasicsonlineportal@gmail.com",
         to: req.body.email,

@@ -2,8 +2,8 @@
 const express = require("express");
 const session = require("express-session");
 var exphbs = require("express-handlebars");
-const nodemailer = require("nodemailer");
-require("dotenv").config();
+// const nodemailer = require("nodemailer");
+// require("dotenv").config();
 
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
@@ -31,85 +31,85 @@ app.use(passport.session());
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
-// ========== NODEMAILER ========== //
-const transporter = nodemailer.createTransport({
-  // host: "smtp-mail.outlook.com",
-  // secureConnection: false,
-  // port: 587,
-  // logger: true,
-  // debug: true,
+// // ========== NODEMAILER ========== //
+// const transporter = nodemailer.createTransport({
+//   // host: "smtp-mail.outlook.com",
+//   // secureConnection: false,
+//   // port: 587,
+//   // logger: true,
+//   // debug: true,
 
-  // host: "smtp.gmail.com",
-  // port: 465,
-  // secure: true,
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASS,
-  },
-  tls: {
-    // do not fail on invalid certs
-    rejectUnauthorized: true,
-    ciphers: "SSLv3",
-  },
-});
+//   // host: "smtp.gmail.com",
+//   // port: 465,
+//   // secure: true,
+//   service: "gmail",
+//   auth: {
+//     user: process.env.EMAIL,
+//     pass: process.env.PASS,
+//   },
+//   tls: {
+//     // do not fail on invalid certs
+//     rejectUnauthorized: true,
+//     ciphers: "SSLv3",
+//   },
+// });
 
-// verify connection configuration
-transporter.verify(function(error, success) {
-  if (success) {
-    console.log("verification success");
-  } else {
-    console.log("error", error);
-  }
-});
+// // verify connection configuration
+// transporter.verify(function(error, success) {
+//   if (success) {
+//     console.log("verification success");
+//   } else {
+//     console.log("error", error);
+//   }
+// });
 
-const mailOptions = {
-  from: "codebasicsonlineportal@gmail.com", // sender address (who sends)
-  to: 'feelthehousegroove@yahoo.com, ivan_e21@hotmail.com', // list of receivers (who receives)
-  subject: "Welcome to CODEBASICS.COM", // Subject line
-  text: "Hello world, this is the first email", // plaintext body
-};
+// const mailOptions = {
+//   from: "codebasicsonlineportal@gmail.com", // sender address (who sends)
+//   to: 'nastia.iv.91@gmail.com, ivan_e21@hotmail.com', // list of receivers (who receives)
+//   subject: "Welcome to CODEBASICS.COM", // Subject line
+//   text: "Hello world, this is the first email", // plaintext body
+// };
 
-// send mail with defined transport object
-transporter.sendMail(mailOptions, function(error, info) {
-  if (error) {
-    return console.log(error);
-  }
-  console.log("Message sent: " + info.response);
-});
+// // send mail with defined transport object
+// transporter.sendMail(mailOptions, function(error, info) {
+//   if (error) {
+//     return console.log(error);
+//   }
+//   console.log("Message sent: " + info.response);
+// });
 
-app.post("/", (req, res) => {
-  db.User.create({
-    // email: req.body.email,
-    // password: req.body.password,
-    // firstName: req.body.firstName,
-    // lastName: req.body.lastName,
+// app.post("/api/signup", (req, res) => {
+//   db.User.create({
+//     // email: req.body.email,
+//     // password: req.body.password,
+//     // firstName: req.body.firstName,
+//     // lastName: req.body.lastName,
     
-    name: req.body.name,
-    email: req.body.email,
-    message: req.body.message
-  })
-    .then(() => {
-      res.redirect(307, "/api/signup");
-      const mailOptions = {
-        from: "codebasicsonlineportal@gmail.com",
-        to: req.body.email,
-        subject: "Welcome to CODEBASICS.COM",
-        text: "Hello world, this is the first email",
-      };
-      transporter.sendMail(mailOptions, (err) => {
-        if (err) {
-          console.log("Error has occured");
-        } else {
-          console.log("Email Sent");
-        }
-      });
-    })
-    .catch((err) => {
-      res.status(401).json(err);
-    });
-});
-// ========== END NODEMAILER ========== //
+//     name: req.body.name,
+//     email: req.body.email,
+//     message: req.body.message
+//   })
+//     .then(() => {
+//       res.redirect(307, "/");
+//       const mailOptions = {
+//         from: "codebasicsonlineportal@gmail.com",
+//         to: req.body.email,
+//         subject: "Welcome to CODEBASICS.COM",
+//         text: "Hello world, this is the first email",
+//       };
+//       transporter.sendMail(mailOptions, (err) => {
+//         if (err) {
+//           console.log("Error has occured");
+//         } else {
+//           console.log("Email Sent");
+//         }
+//       });
+//     })
+//     .catch((err) => {
+//       res.status(401).json(err);
+//     });
+// });
+// // ========== END NODEMAILER ========== //
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(() => {

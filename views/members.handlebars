@@ -38,55 +38,57 @@
 				</div>
 			</div>
 			<div class="col-md-3"></div>
-
-			{{!-- <div class="col-md-3"></div> --}}
-			<div class="col-md-3">
+</div>
+			<div class="row task-container justify-content-center">
+				<div class="col-md-2"></div>
+			<div class="col-md-5">
 				<h3><strong>HTML:</strong></h3>
 				<h5><a href="https://html.com/">Resources</a></h5>
 				<ol id="unfinishedTopics">
-					{{#each Topics}}
-					{{#unless this.dataValues.t_condition}}
+					{{#each Html}}
+					{{#unless this.dataValues.html_condition}}
 					<li>
 						<p>
-							<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
+							<button type='submit' id={{this.dataValues.id}} class="complete-html btn btn-sm btn-primary"
 								data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
-							{{this.dataValues.topic_name}}
+							{{this.dataValues.html_name}}
 
 						</p>
 					</li>
 					{{/unless}}
 					{{/each}}
 				</ol>
-				<form class="create-update-form" action="api/insertTopic" method="POST">
-					<div>
-						<textarea type="text" placeholder="Type..." name="name"></textarea><br>
-						<button class="btn btn-primary" type="submit">Search</button>
-					</div>
-				</form>
-			</div>
-			<div class="col-md-3">
-				<h3><strong>CSS:</strong></h3>
-				<h5><a href="https://devdocs.io/css/">Resources</a></h5>
-				<ol id="unfinishedActivities">
-					{{#each Activities}}
-					{{#unless this.dataValues.a_condition}}
-					<li>
-						<p>
-							<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
-								data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
-							{{this.dataValues.topic_name}}
-
-						</p>
-					</li>
-					{{/unless}}
-					{{/each}}
-				</ol>
-				<form class="create-update-form" action="api/insertTopic" method="POST">
+				<form class="create-update-form" action="api/insertHtml" method="POST">
 					<div>
 						<textarea type="text" placeholder="Type..." name="name"></textarea><br>
 						<button class="btn btn-primary" type="submit">Add topic</button>
 					</div>
 				</form>
+			</div>
+			<div class="col-md-5">
+				<h3><strong>CSS:</strong></h3>
+				<h5><a href="https://devdocs.io/css/">Resources</a></h5>
+				<ol id="unfinishedCss">
+					{{#each Css}}
+					{{#unless this.dataValues.css_condition}}
+					<li>
+						<p>
+							<button type='submit' id={{this.dataValues.id}} class="complete-css btn btn-sm btn-primary"
+								data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
+							{{this.dataValues.css_name}}
+
+						</p>
+					</li>
+					{{/unless}}
+					{{/each}}
+				</ol>
+				<form class="create-update-form" action="api/insertCss" method="POST">
+					<div>
+						<textarea type="text" placeholder="Type..." name="name"></textarea><br>
+						<button class="btn btn-primary" type="submit">Add topic</button>
+					</div>
+				</form>
+			</div>
 			</div>
 			{{!-- <div class="col-md-3">
 				<h3>JavaScript:</h3>
@@ -141,25 +143,27 @@
 			</div>
 		</div>
 		<div class="col-md-3"></div>
-		{{!-- <div class="col-md-3"></div> --}}
-		<div class="col-md-3">
+
+		<div class="row task-container justify-content-center">
+				<div class="col-md-2"></div>
+		<div class="col-md-5">
 			<h3><strong>Python:</strong></h3>
 			<h5><a href="https://wiki.python.org/moin/BeginnersGuide/Programmers">Resources</a></h5>
 			<ol id="unfinishedTopics">
-				{{#each Topics}}
-				{{#unless this.dataValues.t_condition}}
+				{{#each Python}}
+				{{#unless this.dataValues.python_condition}}
 				<li>
 					<p>
-						<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
+						<button type='submit' id={{this.dataValues.id}} class="complete-python btn btn-sm btn-primary"
 							data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
-						{{this.dataValues.topic_name}}
+						{{this.dataValues.python_name}}
 
 					</p>
 				</li>
 				{{/unless}}
 				{{/each}}
 			</ol>
-			<form class="create-update-form" action="api/insertTopic" method="POST">
+			<form class="create-update-form" action="api/insertPython" method="POST">
 				<div>
 					<textarea type="text" placeholder="Type..." name="name"></textarea><br>
 					<button class="btn btn-primary" type="submit">Add topic</button>
@@ -188,31 +192,31 @@
 				</div>
 			</form>
 		</div> --}}
-		<div class="col-md-3">
+		<div class="col-md-5">
 			<h3><strong>PHP:</strong></h3>
 			<h5><a href="https://www.php.net/manual/en/">Resources</a></h5>
 			<ol id="unfinishedActivities">
-				{{#each Activities}}
-				{{#unless this.dataValues.a_condition}}
+				{{#each Php}}
+				{{#unless this.dataValues.php_condition}}
 				<li>
 					<p>
-						<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
+						<button type='submit' id={{this.dataValues.id}} class="complete-php btn btn-sm btn-primary"
 							data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
-						{{this.dataValues.topic_name}}
+						{{this.dataValues.php_name}}
 
 					</p>
 				</li>
 				{{/unless}}
 				{{/each}}
 			</ol>
-			<form class="create-update-form" action="api/insertTopic" method="POST">
+			<form class="create-update-form" action="api/insertPhp" method="POST">
 				<div>
 					<textarea type="text" placeholder="Type..." name="name"></textarea><br>
 					<button class="btn btn-primary" type="submit">Add topic</button>
 				</div>
 			</form>
 		</div>
-
+</div>
 		<br>
 		{{!-- BACK-END PROGRESS BAR --}}
 		<div class="row justify-content-center">

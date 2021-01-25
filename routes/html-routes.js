@@ -27,28 +27,44 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, (req, res) => {
     db.Html.findAll({}).then(function(dbHtml) {
       db.Css.findAll({}).then(function(dbCss) { 
-           res.render("members", {Html: dbHtml, Css: dbCss})
+                  db.Python.findAll({}).then(function(dbPython) {
+                         db.Php.findAll({}).then(function(dbPhp) {
+           res.render("members", {Html: dbHtml, Css: dbCss, Python: dbPython, Php: dbPhp})
       })
+    })
+  }) 
   });
   });
 
 
-  app.post("/api/insertTopic", function(req, res) {
-    db.Topics.create({topic_name: req.body.name, t_condition: false}).then(function() {
+  app.post("/api/insertHtml", function(req, res) {
+    db.Html.create({html_name: req.body.name, html_condition: false}).then(function() {
         res.redirect("/members");
       });
   });
   
-  app.post("/api/insertActivity", function(req, res) {
-    db.Activities.create({activity_name: req.body.name, a_condition: false}).then(function() {
+  app.post("/api/insertCss", function(req, res) {
+    db.Css.create({css_name: req.body.name, css_condition: false}).then(function() {
+        res.redirect("/members");
+      });
+  });
+
+  app.post("/api/insertPhp", function(req, res) {
+    db.Php.create({php_name: req.body.name, php_condition: false}).then(function() {
+        res.redirect("/members");
+      });
+  });
+
+  app.post("/api/insertPython", function(req, res) {
+    db.Python.create({python_name: req.body.name, python_condition: false}).then(function() {
         res.redirect("/members");
       });
   });
 
  
-  app.put("/api/updateTopic/:id", function(req, res) {
-    db.Topics.update(
-      {t_condition: true},
+  app.put("/api/updateHtml/:id", function(req, res) {
+    db.Html.update(
+      {html_condition: true},
       {
         where: {
           id: req.params.id
@@ -60,9 +76,9 @@ module.exports = function(app) {
   });
 
 
-  app.put("/api/updateActivity/:id", function(req, res) {
-    db.Activities.update(
-      {a_condition: true},
+  app.put("/api/updateCss/:id", function(req, res) {
+    db.Css.update(
+      {css_condition: true},
       {
         where: {
           id: req.params.id
@@ -72,5 +88,32 @@ module.exports = function(app) {
         res.sendStatus(200);
     });
   });
+
+  app.put("/api/updatePhp/:id", function(req, res) {
+    db.Php.update(
+      {php_condition: true},
+      {
+        where: {
+          id: req.params.id
+        }
+      }).then(function() {
+       
+        res.sendStatus(200);
+    });
+  });
+
+  app.put("/api/updatePython/:id", function(req, res) {
+    db.Python.update(
+      {python_condition: true},
+      {
+        where: {
+          id: req.params.id
+        }
+      }).then(function() {
+       
+        res.sendStatus(200);
+    });
+  });
+
 };
 

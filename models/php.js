@@ -3,6 +3,7 @@ module.exports = function(sequelize, DataTypes) {
       php_name: DataTypes.STRING,
       php_condition: DataTypes.BOOLEAN}, { 
       timestamps: false,
+      freezeTableName: true,
     });
     return Php;
   };

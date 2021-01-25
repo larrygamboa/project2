@@ -1,11 +1,23 @@
 $(document).ready(function() {
-  const unfinishedNum = $("#unfinishedTopics").children().length;
-  const finishedNum = $("#finishedTopics").children().length;
-  console.log(unfinishedNum);
-  console.log(finishedNum);
-  const total = unfinishedNum + finishedNum;
-  const progressTopic = Math.round((unfinishedNum * 100) / total);
-  console.log(progressTopic);
-  $("#progressTopic")
-    .attr("style", "width: " + progressTopic + "%" ).text(progressTopic + "%")
+  const unfinishedHtml = $("#unfinishedHtml").children().length;
+  const finishedHtml = $("#finishedHtml").children().length;
+  const unfinishedCss = $("#unfinishedCss").children().length;
+  const finishedCss = $("#finishedCss").children().length;
+  const finishedFront = finishedHtml + finishedCss;
+  const totalFront = unfinishedHtml + finishedHtml + unfinishedCss + finishedCss;
+  const progressFrontEnd = Math.round((finishedFront * 100) / totalFront);
+  $("#progressFrontEnd")
+    .attr("style", "width: " + progressFrontEnd + "%")
+    .text(progressFrontEnd + "%");
+
+  const unfinishedPhp = $("#unfinishedPhp").children().length;
+  const finishedPhp = $("#finishedPhp").children().length;
+  const unfinishedPython = $("#unfinishedPython").children().length;
+  const finishedPython = $("#finishedPython").children().length;
+  const finishedBack = finishedPhp + finishedPython;
+  const totalBack = unfinishedPhp + finishedPhp + unfinishedPython + finishedPython;
+  const progressBackEnd = Math.round((finishedBack * 100) / totalBack);
+  $("#progressBackEnd")
+    .attr("style", "width: " + progressBackEnd + "%")
+    .text(progressBackEnd + "%");
 });

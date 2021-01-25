@@ -3,6 +3,7 @@ module.exports = function(sequelize, DataTypes) {
       html_name: DataTypes.STRING,
       html_condition: DataTypes.BOOLEAN}, { 
       timestamps: false,
+      freezeTableName: true,
     });
     return Html;
   };

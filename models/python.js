@@ -3,6 +3,7 @@ module.exports = function(sequelize, DataTypes) {
       python_name: DataTypes.STRING,
       python_condition: DataTypes.BOOLEAN}, { 
       timestamps: false,
+      freezeTableName: true,
     });
     return Python;
   };

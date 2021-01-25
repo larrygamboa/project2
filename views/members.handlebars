@@ -1,192 +1,164 @@
-   <div class="container containerMembers container-fluid">
-      <div class="row head1 text">
-        <div class="col-md-12 text">
-          <p class="text2">Learn web development in a collaborative setting</p>
-          <hr />
-        </div>
-        
-      </div>
-      <div class="row head1">
-        <div class="col-md-4">
-          <h1 class="text">CODEBASICS.COM<br /><span class="h1-small">Online Portal</span></h1>
-        </div>
-        <div class="col-md-8"></div>
-    </div>
-
-<div class="row">
-	 <div class="col-md-2">
-	 </div>
-	  <div class="col-md-5">
-		  <h2>Welcome
-				<span class="member-name"></span>
-			</h2> 
-	 </div>
-	  <div class="col-md-5">
-		 <h1>STUDENT DASHBOARD</h1>
-		  <a class="navbar-brand" href="/logout">
-				Logout
-			</a>
-	 </div>
-
-
-</div>
-
-<br>
-<br>
-
-<div class="row">
-	<div class="col-md-12">
-		 <h1 class="text-center">Front-end Web development technologies</h1>
-		 <h2 class="text-center">Please follow the resource link to find and add more topics.</h2>
-
-
-</div>
-
-<br>
-<br>
-
-
-
-
-
-
-
-
-	
-	<br>
-	<div class="row task-container justify-content-center">
-	
-	
-	{{!-- <div class="col-md-3"></div> --}}
-		<div class="col-md-3">
-			<h3>HTML:</h3>
-			<h4><a href="https://html.com/">Resources</a></h4>
-			<ol id="unfinishedTopics">
-				{{#each Topics}}
-
-				{{#unless this.dataValues.t_condition}}
-				<li><p> 
-					<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
-							data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
-					 {{this.dataValues.topic_name}}
-						
-					</p>
-				</li>
-				{{/unless}}
-				{{/each}}
-			</ol>
-
-			<form class="create-update-form" action="api/insertTopic" method="POST">
-				<div>
-					<textarea type="text" placeholder="Type..." name="name"></textarea><br>
-					<button class="btn btn-primary" type="submit">Add topic</button>
-				</div>
-			</form>
+<div class="container containerMembers container-fluid">
+	<div class="row head1 text">
+		<div class="col-md-12 text">
+			<p class="text2">Learn web development in a collaborative setting</p>
+			<hr />
 		</div>
-
-		<div class="col-md-3">
-			<h3>CSS:</h3>
-			<h4><a href="https://devdocs.io/css/">Resources</a></h4>
-			<ol id="unfinishedActivities">
-				{{#each Activities}}
-				{{#unless this.dataValues.a_condition}}
-				<li><p> 
-					<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
-							data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
-					 {{this.dataValues.topic_name}}
-						
-					</p>
-				</li>
-				{{/unless}}
-				{{/each}}
-			</ol>
-
-			<form class="create-update-form" action="api/insertTopic" method="POST">
-				<div>
-					<textarea type="text" placeholder="Type..." name="name"></textarea><br>
-					<button class="btn btn-primary" type="submit">Add topic</button>
-				</div>
-			</form>
+	</div>
+	<div class="row head1">
+		<div class="col-md-4">
+			<h1 class="text"><a href="#">CODEBASICS.COM<br /><span class="h1-small">Online Portal</span></a></h1>
 		</div>
-
-		{{!-- <div class="col-md-3">
-			<h3>JavaScript:</h3>
-			<h4><a href="https://javascript.info/">Resources</a></h4>
-			<ul id="unfinishedActivities">
-				{{#each Activities}}
-				{{#unless this.dataValues.a_condition}}
-				<li>
-					<h5>{{this.dataValues.id}}.{{this.dataValues.activity_name}}
-						<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
-							data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
-					</h5>
-
-				</li>
-				{{/unless}}
-				{{/each}}
-			</ul>
-
-			<form class="create-update-form" action="api/insertTopic" method="POST">
-				<div>
-					<textarea type="text" placeholder="Type..." name="name"></textarea><br>
-					<button class="btn btn-primary" type="submit">Add topic</button>
-				</div>
-			</form>
-		</div>
-
-	</div> --}}
-	<br>
-
-	<div class="row justify-content-center">
-		<div class="col-md-6">
-			<h1 class="text-center">Track your progress!</h1>
-			<br>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" id="progressTopic" aria-valuemin="0"
-					aria-valuemax="100"></div>
+		<div class="col-md-8"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8 text-center">
+			<div>
+				<h2 class="welcome mt-4">Welcome <span class="member-name">techmedia.lg@gmail.com</span> </h2>
+			</div>
+			<div class="student-dash-cont">
+				<h2 class="student-dash-head">STUDENT DASHBOARD</h2>
+				<a class="navbar-brand" href="/logout">Logout</a>
 			</div>
 		</div>
+		<div class="col-md-2"></div>
 	</div>
 	<br>
 	<br>
-	<br>
-	<br>
+	<div class="row">
+
+
+		<div class="row task-container justify-content-center">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<div class="course-head">
+					<h3 class="text-center"><strong>Front-end Web development technologies</strong></h3>
+					<p class="text-center">Please follow the resource link to find and add more topics.</p>
+				</div>
+			</div>
+			<div class="col-md-3"></div>
+
+			{{!-- <div class="col-md-3"></div> --}}
+			<div class="col-md-3">
+				<h3><strong>HTML:</strong></h3>
+				<h5><a href="https://html.com/">Resources</a></h5>
+				<ol id="unfinishedTopics">
+					{{#each Topics}}
+					{{#unless this.dataValues.t_condition}}
+					<li>
+						<p>
+							<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
+								data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
+							{{this.dataValues.topic_name}}
+
+						</p>
+					</li>
+					{{/unless}}
+					{{/each}}
+				</ol>
+				<form class="create-update-form" action="api/insertTopic" method="POST">
+					<div>
+						<textarea type="text" placeholder="Type..." name="name"></textarea><br>
+						<button class="btn btn-primary" type="submit">Search</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-3">
+				<h3><strong>CSS:</strong></h3>
+				<h5><a href="https://devdocs.io/css/">Resources</a></h5>
+				<ol id="unfinishedActivities">
+					{{#each Activities}}
+					{{#unless this.dataValues.a_condition}}
+					<li>
+						<p>
+							<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
+								data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
+							{{this.dataValues.topic_name}}
+
+						</p>
+					</li>
+					{{/unless}}
+					{{/each}}
+				</ol>
+				<form class="create-update-form" action="api/insertTopic" method="POST">
+					<div>
+						<textarea type="text" placeholder="Type..." name="name"></textarea><br>
+						<button class="btn btn-primary" type="submit">Add topic</button>
+					</div>
+				</form>
+			</div>
+			{{!-- <div class="col-md-3">
+				<h3>JavaScript:</h3>
+				<h4><a href="https://javascript.info/">Resources</a></h4>
+				<ul id="unfinishedActivities">
+					{{#each Activities}}
+					{{#unless this.dataValues.a_condition}}
+					<li>
+						<h5>{{this.dataValues.id}}.{{this.dataValues.activity_name}}
+							<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
+								data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
+						</h5>
+					</li>
+					{{/unless}}
+					{{/each}}
+				</ul>
+				<form class="create-update-form" action="api/insertTopic" method="POST">
+					<div>
+						<textarea type="text" placeholder="Type..." name="name"></textarea><br>
+						<button class="btn btn-primary" type="submit">Add topic</button>
+					</div>
+				</form>
+			</div>
+		</div> --}}
+		<br>
+		{{!-- FRONT-END PROGRESS BAR --}}
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<h3 class="text-center mt-3">Track your progress!</h3>
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" id="progressTopic" aria-valuemin="0"
+						aria-valuemax="100"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
 
 	<br>
-
-<div class="row scroll">
-	<div class="col-md-12">
-		 <h1 class="text-center">Back-end Web development technologies</h1>
-		 <h2 class="text-center">Please follow the resource link to find and add more topics.</h2>
-
-
-</div>
-
-<br>
-<br>
-<br>
+	<br>
+	<br>
+	<br>
+	<br>
 	<div class="row task-container justify-content-center">
-	
-	
-	{{!-- <div class="col-md-3"></div> --}}
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<div class="course-head">
+				<h3 class="text-center"><strong>Back-end Web development technologies</strong></h3>
+				<p class="text-center">Please follow the resource link to find and add more topics.</p>
+			</div>
+		</div>
+		<div class="col-md-3"></div>
+		{{!-- <div class="col-md-3"></div> --}}
 		<div class="col-md-3">
-			<h3>Python:</h3>
-			<h4><a href="https://wiki.python.org/moin/BeginnersGuide/Programmers">Resources</a></h4>
+			<h3><strong>Python:</strong></h3>
+			<h5><a href="https://wiki.python.org/moin/BeginnersGuide/Programmers">Resources</a></h5>
 			<ol id="unfinishedTopics">
 				{{#each Topics}}
-
 				{{#unless this.dataValues.t_condition}}
-				<li><p> 
-					<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
+				<li>
+					<p>
+						<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
 							data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
-					 {{this.dataValues.topic_name}}
-						
+						{{this.dataValues.topic_name}}
+
 					</p>
 				</li>
 				{{/unless}}
 				{{/each}}
 			</ol>
-
 			<form class="create-update-form" action="api/insertTopic" method="POST">
 				<div>
 					<textarea type="text" placeholder="Type..." name="name"></textarea><br>
@@ -194,7 +166,6 @@
 				</div>
 			</form>
 		</div>
-
 		{{!-- <div class="col-md-3">
 			<h3>JAVA:</h3>
 			<h4><a href="https://www.programiz.com/java-programming">Resources</a></h4>
@@ -206,12 +177,10 @@
 						<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
 							data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
 					</h5>
-
 				</li>
 				{{/unless}}
 				{{/each}}
 			</ul>
-
 			<form class="create-update-form" action="api/insertTopic" method="POST">
 				<div>
 					<textarea type="text" placeholder="Type..." name="name"></textarea><br>
@@ -219,24 +188,23 @@
 				</div>
 			</form>
 		</div> --}}
-
 		<div class="col-md-3">
-			<h3>PHP:</h3>
-			<h4><a href="https://www.php.net/manual/en/">Resources</a></h4>
+			<h3><strong>PHP:</strong></h3>
+			<h5><a href="https://www.php.net/manual/en/">Resources</a></h5>
 			<ol id="unfinishedActivities">
 				{{#each Activities}}
 				{{#unless this.dataValues.a_condition}}
-				<li><p> 
-					<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
+				<li>
+					<p>
+						<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
 							data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
-					 {{this.dataValues.topic_name}}
-						
+						{{this.dataValues.topic_name}}
+
 					</p>
 				</li>
 				{{/unless}}
 				{{/each}}
 			</ol>
-
 			<form class="create-update-form" action="api/insertTopic" method="POST">
 				<div>
 					<textarea type="text" placeholder="Type..." name="name"></textarea><br>
@@ -245,26 +213,25 @@
 			</form>
 		</div>
 
-	</div>
-	<br>
-
-	<div class="row justify-content-center">
-		<div class="col-md-6">
-			<h1 class="text-center">Track your progress!</h1>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" id="progressBackEnd" aria-valuemin="0"
-					aria-valuemax="100">Complete</div>
+		<br>
+		{{!-- BACK-END PROGRESS BAR --}}
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<h3 class="text-center mt-3">Track your progress!</h3>
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+						id="progressBackEnd" aria-valuemin="0" aria-valuemax="100">Complete</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-md-12 text-center">
 			</div>
 		</div>
 	</div>
-<br>
-<br>
-<br>
-<div class="row">
-	<div class="col-md-12 text-center">
-	</div>
-</div>
-</div>
 	{{!-- <div class="row">
 		<div class="col-md-12 text-center">
 			<form class="create-update-form" action="api/insertActivity" method="POST">
@@ -275,10 +242,6 @@
 			</form>
 		</div>
 	</div> --}}
-
-
-
-
 	{{!-- <div class="row">
 		<div class="col-md-5">
 			<h3>COMPLETE ACTIVITIES:</h3>
@@ -288,15 +251,13 @@
 				<li>
 					<h5>{{this.dataValues.id}}.{{this.dataValues.activity_name}}
 					</h5>
-
 				</li>
 				{{/if}}
 				{{/each}}
 			</ul>
 		</div>
 	</div>
-
-		<div class="row">
+	<div class="row">
 		<div class="col-md-5">
 			<h3>COMPLETE TOPICS:</h3>
 			<ul id="finishedTopics">
@@ -305,15 +266,12 @@
 				<li>
 					<h5>{{this.dataValues.id}}.{{this.dataValues.topic_name}}
 					</h5>
-
 				</li>
 				{{/if}}
 				{{/each}}
 			</ul>
 		</div>
 	</div> --}}
-
-
-{{!--
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/members.js"></script> --}}
+	{{!--
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/members.js"></script> --}}

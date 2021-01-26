@@ -13,16 +13,15 @@ const mysql = require("mysql");
 let connection;
 // Connect to database
 if (process.env.JAWSDB_URL) {
-  var connection = new Sequelize(process.env.JAWSDB_URL)
+ connection = new Sequelize(process.env.JAWSDB_URL)
 } else {
-  var connection = mysql.createConnection({
+  connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '27qweasd',
     database: 'passport_demo'
   });
 }
-
 // // Make sure connection works
 // connection.connect(function(err) {
 //   if (err) {

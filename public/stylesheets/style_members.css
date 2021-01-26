@@ -1,5 +1,5 @@
 body#members-page {
-  background-color: rgb(255, 240, 34);
+  background-color: rgb(230, 229, 218);
   font-family: "Roboto", sans-serif;
 }
 
@@ -7,11 +7,13 @@ body#members-page {
   margin: 0;
   padding: 0;
   max-width: unset;
+  background-image: url("/img/2.jpg");
+  background-size: cover;
 }
 
 body {
   width: 100%;
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
 }
 
 .head1 {
@@ -43,12 +45,21 @@ h1.text a {
 
 p.text2 {
   /* color: rgb(189, 182, 182); */
-  color: #fff;
+  color: rgb(250, 233, 135);
   font-family: "Libre Baskerville", serif;
-  font-size: 2em;
+  font-size: 1.5em;
   margin-top: 1em;
   text-align: center;
   text-transform: uppercase;
+}
+
+p.text3 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.1em;
+  text-align: left;
+  padding-left: 0.8em;
+  padding-top: 0.5em;
+  line-height: 2em;
 }
 
 .row.scroll {
@@ -68,15 +79,21 @@ h2.welcome {
 }
 
 h2.student-dash-head {
+  font-family: "Libre Baskerville", serif;
   font-size: 3rem;
+  color: rgb(0, 0, 0);
+  padding: 0.5em;
 }
 
+
 a.navbar-brand {
-  color: #fff;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  padding-left: 1.3em;
 }
 
 a.navbar-brand:hover {
-  color: #fff;
+  color: rgb(28, 2, 255);
   text-decoration: underline;
 }
 
@@ -92,14 +109,44 @@ a.navbar-brand:hover {
   font-size: 2rem;
 }
 
-ol#unfinishedTopics li {
-  margin-bottom: 0.25em;
+p.unfinished {
+  font-size: 1.4em;
 }
 
 .create-update-form {
   padding-left: 1em;
 }
 
-.progress {
+div.progress.progressbar {
   margin-bottom: 3em;
+  background-color: rgb(151, 235, 247);
 }
+
+.row.rowOne1 {
+  background-image: url("/img/2.jpg");
+  background-size: cover;
+}
+
+.row.rowTwo {
+  background-color: rgb(253, 205, 115);
+  color:black;
+}
+
+.row.rowThree {
+  background-color: rgb(68, 121, 218);
+}
+
+.col-sm-3.credentials {
+  background-color: rgb(226, 226, 226);
+  color: rgb(0, 0, 0);
+  font-family: "Libre Baskerville", serif;
+  font-size: 1em;
+  margin-top: -1em;
+  margin-bottom: -1.5em;
+  text-align: left;
+  padding: 2rem;
+}
+
+/* .row.justify-content-center.dash {
+  background-color: black;
+} */

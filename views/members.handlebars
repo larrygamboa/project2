@@ -5,309 +5,263 @@
 			<hr />
 		</div>
 	</div>
-	<div class="row head1">
+	{{!-- <div class="row head1">
 		<div class="col-md-4">
 			<h1 class="text"><a href="#">CODEBASICS.COM<br /><span class="h1-small">Online Portal</span></a></h1>
 		</div>
 		<div class="col-md-8"></div>
-	</div>
-	<div class="row">
-		<div class="col-md-2"></div>
-		<div class="col-md-8 text-center">
-			<div>
-				<h2 class="welcome mt-4">Welcome <span class="member-name">techmedia.lg@gmail.com</span> </h2>
-			</div>
-			<div class="student-dash-cont">
-				<h2 class="student-dash-head">STUDENT DASHBOARD</h2>
-				<a class="navbar-brand" href="/logout">Logout</a>
-			</div>
-		</div>
-		<div class="col-md-2"></div>
-	</div>
-	<br>
-	<br>
-	<div class="row">
+	</div> --}}
 
-
-		<div class="row task-container justify-content-center">
-			<div class="col-md-3"></div>
-			<div class="col-md-6">
-				<div class="course-head">
-					<h3 class="text-center"><strong>Front-end Web development technologies</strong></h3>
-					<p class="text-center">Please follow the resource link to find and add more topics.</p>
+	<div class="row justify-content-center rowOne dash">
+		<div class="col-sm-1"></div>
+		<div class="col-sm-6">
+			<h2 class="student-dash-head">STUDENT DASHBOARD</h2>
+			<div class="row rowTwo">
+				<div class="col-2 col-sm-4">
+					<br>
+					<a class="navbar-brand" href="/logout">Logout</a>
+					<br><br>
+				</div>
+				<div class="col-1 col-sm-4">
+					<br>
 				</div>
 			</div>
-			<div class="col-md-3"></div>
 		</div>
-		<div class="row task-container justify-content-center">
-			<div class="col-md-2"></div>
-			<div class="col-md-5">
-				<h3><strong>HTML:</strong></h3>
-				<h5><a href="https://html.com/">Resources</a></h5>
-				<ol id="unfinishedHtml">
-					{{#each Html}}
-					{{#unless this.dataValues.html_condition}}
-					<li>
-						<p>
-							<button type='submit' id={{this.dataValues.id}} class="complete-html btn btn-sm btn-primary"
-								data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
-							{{this.dataValues.html_name}}
-
-						</p>
-					</li>
-					{{/unless}}
-					{{/each}}
-				</ol>
-				<form class="create-update-form" action="api/insertHtml" method="POST">
-					<div>
-						<textarea type="text" placeholder="Type..." name="name"></textarea><br>
-						<button class="btn btn-primary" type="submit">Add topic</button>
-					</div>
-				</form>
+		<div class="col-sm-3 credentials">
+			<div class="input-group mx-auto">
+				<input type="text" class="form-control" placeholder="CODEBASICS.COM" aria-label="Recipient's username"
+					disabled>
+				{{!-- <div class="input-group-append">
+					<span class="input-group-text" id="basic-addon2">@example.com</span>
+				</div> --}}
 			</div>
-			<div class="col-md-5">
-				<h3><strong>CSS:</strong></h3>
-				<h5><a href="https://devdocs.io/css/">Resources</a></h5>
-				<ol id="unfinishedCss">
-					{{#each Css}}
-					{{#unless this.dataValues.css_condition}}
-					<li>
-						<p>
-							<button type='submit' id={{this.dataValues.id}} class="complete-css btn btn-sm btn-primary"
-								data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
-							{{this.dataValues.css_name}}
+			<p class="text3">
+				Welcome
+				<br><span class="member-name">your email</span>
+				<br>Full Stack Program
+			<p>
+		</div>
+	</div>
 
-						</p>
-					</li>
-					{{/unless}}
-					{{/each}}
-				</ol>
-				<form class="create-update-form" action="api/insertCss" method="POST">
-					<div>
-						<textarea type="text" placeholder="Type..." name="name"></textarea><br>
-						<button class="btn btn-primary" type="submit">Add topic</button>
-					</div>
-				</form>
+	<br>
+	<br>
+	<br>
+
+
+
+	<div class="row task-container justify-content-center rowOne">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<div>
+				<h3 class="text-center"><strong>Front-end Web development technologies</strong></h3>
+				<p class="text-center">Please follow the resource link to find and add more topics.</p>
 			</div>
 		</div>
-		{{!-- <div class="col-md-3">
-			<h3>JavaScript:</h3>
-			<h4><a href="https://javascript.info/">Resources</a></h4>
-			<ul id="unfinishedActivities">
-				{{#each Activities}}
-				{{#unless this.dataValues.a_condition}}
+
+		<div class="col-md-3"></div>
+	</div>
+	<hr>
+	<div class="row task-container justify-content-center rowOne">
+		<div class="col-md-1"></div>
+		<div class="col-md-5">
+			<h3><strong>HTML:</strong></h3>
+			<h5><a href="https://html.com/">Resources</a></h5>
+			<ol id="unfinishedHtml">
+				{{#each Html}}
+				{{#unless this.dataValues.html_condition}}
 				<li>
-					<h5>{{this.dataValues.id}}.{{this.dataValues.activity_name}}
-						<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
+					<p class="unfinished">
+						<button type='submit' id={{this.dataValues.id}} class="complete-html btn btn-sm btn-primary"
 							data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
-					</h5>
+						{{this.dataValues.html_name}}
+
+					</p>
 				</li>
 				{{/unless}}
 				{{/each}}
-			</ul>
-			<form class="create-update-form" action="api/insertTopic" method="POST">
+			</ol>
+			<form class="create-update-form" action="api/insertHtml" method="POST">
 				<div>
-					<textarea type="text" placeholder="Type..." name="name"></textarea><br>
+					<textarea type="text" rows="1" cols="35" placeholder="Type in the name of the topic..." name="name"></textarea><br>
 					<button class="btn btn-primary" type="submit">Add topic</button>
 				</div>
 			</form>
 		</div>
-	</div> --}}
+		<div class="col-md-5">
+			<h3><strong>CSS:</strong></h3>
+			<h5><a href="https://devdocs.io/css/">Resources</a></h5>
+			<ol id="unfinishedCss">
+				{{#each Css}}
+				{{#unless this.dataValues.css_condition}}
+				<li>
+					<p class="unfinished">
+						<button type='submit' id={{this.dataValues.id}} class="complete-css btn btn-sm btn-primary"
+							data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
+						{{this.dataValues.css_name}}
+
+					</p>
+				</li>
+				{{/unless}}
+				{{/each}}
+			</ol>
+			<form class="create-update-form" action="api/insertCss" method="POST">
+				<div>
+					<textarea type="text" rows="1" cols="35" placeholder="Type in the name of the topic..." name="name"></textarea><br>
+					<button class="btn btn-primary" type="submit">Add topic</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
 	<br>
 	{{!-- FRONT-END PROGRESS BAR --}}
 	<div class="row justify-content-center">
 		<div class="col-md-6">
 			<h3 class="text-center mt-3">Track your progress!</h3>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" id="progressFrontEnd" aria-valuemin="0" aria-valuemax="100">
+			<div class="progress progressbar">
+				<div class="progress-bar progress-bar-striped" role="progressbar" id="progressFrontEnd"
+					aria-valuemin="0" aria-valuemax="100">
 				</div>
 			</div>
 		</div>
 	</div>
 
-</div>
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="row task-container justify-content-center">
-	<div class="col-md-3"></div>
-	<div class="col-md-6">
-		<div class="course-head">
-			<h3 class="text-center"><strong>Back-end Web development technologies</strong></h3>
-			<p class="text-center">Please follow the resource link to find and add more topics.</p>
-		</div>
-	</div>
-	<div class="col-md-3"></div>
+	<br>
+	<br>
+	<hr>
 
 	<div class="row task-container justify-content-center">
-		<div class="col-md-2"></div>
-		<div class="col-md-5">
-			<h3><strong>Python:</strong></h3>
-			<h5><a href="https://wiki.python.org/moin/BeginnersGuide/Programmers">Resources</a></h5>
-			<ol id="unfinishedPython">
-				{{#each Python}}
-				{{#unless this.dataValues.python_condition}}
-				<li>
-					<p>
-						<button type='submit' id={{this.dataValues.id}} class="complete-python btn btn-sm btn-primary"
-							data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
-						{{this.dataValues.python_name}}
-
-					</p>
-				</li>
-				{{/unless}}
-				{{/each}}
-			</ol>
-			<form class="create-update-form" action="api/insertPython" method="POST">
-				<div>
-					<textarea type="text" placeholder="Type..." name="name"></textarea><br>
-					<button class="btn btn-primary" type="submit">Add topic</button>
-				</div>
-			</form>
-		</div>
-		{{!-- <div class="col-md-3">
-			<h3>JAVA:</h3>
-			<h4><a href="https://www.programiz.com/java-programming">Resources</a></h4>
-			<ul id="unfinishedActivities">
-				{{#each Activities}}
-				{{#unless this.dataValues.a_condition}}
-				<li>
-					<h5>{{this.dataValues.id}}.{{this.dataValues.activity_name}}
-						<button type='submit' id={{this.dataValues.id}} class="complete-btn btn btn-sm btn-primary"
-							data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
-					</h5>
-				</li>
-				{{/unless}}
-				{{/each}}
-			</ul>
-			<form class="create-update-form" action="api/insertTopic" method="POST">
-				<div>
-					<textarea type="text" placeholder="Type..." name="name"></textarea><br>
-					<button class="btn btn-primary" type="submit">Add topic</button>
-				</div>
-			</form>
-		</div> --}}
-		<div class="col-md-5">
-			<h3><strong>PHP:</strong></h3>
-			<h5><a href="https://www.php.net/manual/en/">Resources</a></h5>
-			<ol id="unfinishedPhp">
-				{{#each Php}}
-				{{#unless this.dataValues.php_condition}}
-				<li>
-					<p>
-						<button type='submit' id={{this.dataValues.id}} class="complete-php btn btn-sm btn-primary"
-							data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
-						{{this.dataValues.php_name}}
-
-					</p>
-				</li>
-				{{/unless}}
-				{{/each}}
-			</ol>
-			<form class="create-update-form" action="api/insertPhp" method="POST">
-				<div>
-					<textarea type="text" placeholder="Type..." name="name"></textarea><br>
-					<button class="btn btn-primary" type="submit">Add topic</button>
-				</div>
-			</form>
-		</div>
-	</div>
-	<br>
-	{{!-- BACK-END PROGRESS BAR --}}
-	<div class="row justify-content-center">
+		<div class="col-md-3"></div>
 		<div class="col-md-6">
-			<h3 class="text-center mt-3">Track your progress!</h3>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" id="progressBackEnd"
-					aria-valuemin="0" aria-valuemax="100"></div>
+			<div>
+				<h3 class="text-center"><strong>Back-end Web development technologies</strong></h3>
+				<p class="text-center">Please follow the resource link to find and add more topics.</p>
 			</div>
 		</div>
+		<div class="col-md-3"></div>
+		<hr>
+		<div class="row task-container justify-content-center">
+			<div class="col-md-1"></div>
+			<div class="col-md-5">
+				<h3><strong>Python:</strong></h3>
+				<h5><a href="https://wiki.python.org/moin/BeginnersGuide/Programmers">Resources</a></h5>
+				<ol id="unfinishedPython">
+					{{#each Python}}
+					{{#unless this.dataValues.python_condition}}
+					<li>
+						<p class="unfinished">
+							<button type='submit' id={{this.dataValues.id}}
+								class="complete-python btn btn-sm btn-primary" data-id="{{this.dataValues.id}}"><i
+									class="far fa-check-square"></i></button>
+							{{this.dataValues.python_name}}
+
+						</p>
+					</li>
+					{{/unless}}
+					{{/each}}
+				</ol>
+				<form class="create-update-form" action="api/insertPython" method="POST">
+					<div>
+						<textarea type="text" rows="1" cols="35" placeholder="Type in the name of the topic..." name="name"></textarea><br>
+						<button class="btn btn-primary" type="submit">Add topic</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="col-md-5">
+				<h3><strong>PHP:</strong></h3>
+				<h5><a href="https://www.php.net/manual/en/">Resources</a></h5>
+				<ol id="unfinishedPhp">
+					{{#each Php}}
+					{{#unless this.dataValues.php_condition}}
+					<li>
+						<p class="unfinished">
+							<button type='submit' id={{this.dataValues.id}} class="complete-php btn btn-sm btn-primary"
+								data-id="{{this.dataValues.id}}"><i class="far fa-check-square"></i></button>
+							{{this.dataValues.php_name}}
+
+						</p>
+					</li>
+					{{/unless}}
+					{{/each}}
+				</ol>
+				<form class="create-update-form" action="api/insertPhp" method="POST">
+					<div>
+						<textarea type="text" rows="1" cols="35" placeholder="Type in the name of the topic..." name="name"></textarea><br>
+						<button class="btn btn-primary" type="submit">Add topic</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<br>
+		{{!-- BACK-END PROGRESS BAR --}}
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<h3 class="text-center mt-3">Track your progress!</h3>
+				<div class="progress progressbar">
+					<div class="progress-bar progress-bar-striped" role="progressbar" id="progressBackEnd"
+						aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+
+
 	</div>
-	<br>
-	<br>
-	<br>
 
+	{{!-- hidden row for completed topics to populate the progress bar --}}
+	<div class="row d-none">
+		<div class="col-md-12 text-center">
 
+			<h3>COMPLETE HTML:</h3>
+			<ul id="finishedHtml">
+				{{#each Html}}
+				{{#if this.dataValues.html_condition}}
+				<li>
+					<h5>{{this.dataValues.id}}.{{this.dataValues.html_name}}
+					</h5>
+				</li>
+				{{/if}}
+				{{/each}}
+			</ul>
+
+			<h3>COMPLETE CSS:</h3>
+			<ul id="finishedCss">
+				{{#each Css}}
+				{{#if this.dataValues.css_condition}}
+				<li>
+					<h5>{{this.dataValues.id}}.{{this.dataValues.css_name}}
+					</h5>
+				</li>
+				{{/if}}
+				{{/each}}
+			</ul>
+
+			<h3>COMPLETE PHP:</h3>
+			<ul id="finishedPhp">
+				{{#each Html}}
+				{{#if this.dataValues.php_condition}}
+				<li>
+					<h5>{{this.dataValues.id}}.{{this.dataValues.php_name}}
+					</h5>
+				</li>
+				{{/if}}
+				{{/each}}
+			</ul>
+
+			<h3>COMPLETE HTML:</h3>
+			<ul id="finishedPython">
+				{{#each Python}}
+				{{#if this.dataValues.python_condition}}
+				<li>
+					<h5>{{this.dataValues.id}}.{{this.dataValues.python_name}}
+					</h5>
+				</li>
+				{{/if}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
 </div>
-
-{{!-- hidden row for completed topics to populate the progress bar --}}
-<div class="row d-none">
-	<div class="col-md-12 text-center">
-
-		<h3>COMPLETE HTML:</h3>
-		<ul id="finishedHtml">
-			{{#each Html}}
-			{{#if this.dataValues.html_condition}}
-			<li>
-				<h5>{{this.dataValues.id}}.{{this.dataValues.html_name}}
-				</h5>
-			</li>
-			{{/if}}
-			{{/each}}
-		</ul>
-
-		<h3>COMPLETE CSS:</h3>
-		<ul id="finishedCss">
-			{{#each Css}}
-			{{#if this.dataValues.css_condition}}
-			<li>
-				<h5>{{this.dataValues.id}}.{{this.dataValues.css_name}}
-				</h5>
-			</li>
-			{{/if}}
-			{{/each}}
-		</ul>
-
-		<h3>COMPLETE PHP:</h3>
-		<ul id="finishedPhp">
-			{{#each Html}}
-			{{#if this.dataValues.php_condition}}
-			<li>
-				<h5>{{this.dataValues.id}}.{{this.dataValues.php_name}}
-				</h5>
-			</li>
-			{{/if}}
-			{{/each}}
-		</ul>
-
-		<h3>COMPLETE HTML:</h3>
-		<ul id="finishedPython">
-			{{#each Python}}
-			{{#if this.dataValues.python_condition}}
-			<li>
-				<h5>{{this.dataValues.id}}.{{this.dataValues.python_name}}
-				</h5>
-			</li>
-			{{/if}}
-			{{/each}}
-		</ul>
-	</div>
-</div>
-{{!-- <div class="row">
-	<div class="col-md-5">
-
-	</div>
-</div>
-<div class="row">
-	<div class="col-md-5">
-		<h3>COMPLETE TOPICS:</h3>
-		<ul id="finishedTopics">
-			{{#each Topics}}
-			{{#if this.dataValues.t_condition}}
-			<li>
-				<h5>{{this.dataValues.id}}.{{this.dataValues.topic_name}}
-				</h5>
-			</li>
-			{{/if}}
-			{{/each}}
-		</ul>
-	</div>
-</div> --}}
-{{!--
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/members.js"></script> --}}

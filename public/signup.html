@@ -169,13 +169,11 @@
                     rows="7"
                   ></textarea>
                 </div>
-                <button
+                <input
                   type="submit"
                   class="btn btn-lg btn-success btn-block"
                   id="btnContactUs"
-                >
-                  Send Message &rarr;
-                </button>
+                  value="Send Message &rarr"/>
               </form>
               <div
                 id="success_message"
@@ -198,22 +196,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/signup.js"></script>
     <script>
-      const form = document.getElementById("contact-form");
+      const form = document.querySelector("#contact-form");
 
       const formEvent = form.addEventListener("submit", (event) => {
         event.preventDefault();
-        let mail = new FormData(form);
+        let mail = {
+          name: document.querySelector("#name").value.trim(),
+          email: document.querySelector("#email").value.trim(),
+          message: document.querySelector("#message").value.trim()
+        }
+
+        console.log("************",mail);
+
         sendMail(mail);
       });
 
       const sendMail = (mail) => {
-        fetch("/api/signup", {
-          method: "post",
-          body: mail,
-        }).then((response) => {
-          return response.json();
+        $.post("/api/mailer", mail).then((res) => {
+          if (res.success) {
+            //empty entries
+            document.querySelector("#name").value = "";
+            document.querySelector("#email").value = "";
+            document.querySelector("#message").value = "";
+            //close
+            $('#myModal .close').click();
+          }
         });
       };
+
     </script>
   </body>
 </html>

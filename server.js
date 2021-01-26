@@ -9,19 +9,19 @@ var exphbs = require("express-handlebars");
 const passport = require("./config/passport");
 
 // Required dependencies
-const mysql = require("mysql");
-let connection;
-// Connect to database
-if (process.env.JAWSDB_URL) {
- connection = new Sequelize(process.env.JAWSDB_URL)
-} else {
-  connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '27qweasd',
-    database: 'passport_demo'
-  });
-}
+// const mysql = require("mysql");
+// let connection;
+// // Connect to database
+// if (process.env.JAWSDB_URL) {
+//  connection = new Sequelize(process.env.JAWSDB_URL)
+// } else {
+//   connection = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: '27qweasd',
+//     database: 'passport_demo'
+//   });
+// }
 // // Make sure connection works
 // connection.connect(function(err) {
 //   if (err) {

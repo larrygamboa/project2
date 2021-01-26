@@ -55,7 +55,7 @@ p.text2 {
 
 p.text3 {
   font-family: "Libre Baskerville", serif;
-  font-size: 1.1em;
+  font-size: 1em;
   text-align: left;
   padding-left: 0.8em;
   padding-top: 0.5em;
@@ -67,11 +67,6 @@ p.text3 {
   flex-direction: column;
 }
 
-h2.welcome {
-  font-size: 2rem;
-  font-family: "Libre Baskerville", serif;
-}
-
 .student-dash-cont {
   background-color: #000;
   color: #fff;
@@ -80,16 +75,17 @@ h2.welcome {
 
 h2.student-dash-head {
   font-family: "Libre Baskerville", serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: rgb(0, 0, 0);
   padding: 0.5em;
+  padding-left: 1em;
 }
 
 
 a.navbar-brand {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: rgb(0, 0, 0);
-  padding-left: 1.3em;
+  padding-left: 1.8em;
 }
 
 a.navbar-brand:hover {
@@ -110,7 +106,7 @@ a.navbar-brand:hover {
 }
 
 p.unfinished {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .create-update-form {
@@ -147,6 +143,3 @@ div.progress.progressbar {
   padding: 2rem;
 }
 
-/* .row.justify-content-center.dash {
-  background-color: black;
-} */

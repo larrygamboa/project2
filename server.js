@@ -8,20 +8,20 @@ var exphbs = require("express-handlebars");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
 
-// // Required dependencies
-// const mysql = require("mysql");
-// let connection;
-// // Connect to database
-// if (process.env.JAWSDB_URL) {
-//   var connection = mysql.createConnection(process.env.JAWSDB_URL)
-// } else {
-//   var connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: 'l@rG020979!',
-//     database: 'passport_demo'
-//   });
-// }
+// Required dependencies
+const mysql = require("mysql");
+let connection;
+// Connect to database
+if (process.env.JAWSDB_URL) {
+  var connection = mysql.createConnection(process.env.JAWSDB_URL)
+} else {
+  var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'l@rG020979!',
+    database: 'passport_demo'
+  });
+}
 
 // // Make sure connection works
 // connection.connect(function(err) {

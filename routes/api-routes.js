@@ -82,8 +82,8 @@ module.exports = function(app) {
   app.post("/api/mailer", (req, res) => {
     console.log("******", req.body);
     const mailOptions = {
-      from: "codebasicsonlineportal@gmail.com",
-      to: req.body.email,
+      from: req.body.email,
+      to: "codebasicsonlineportal@gmail.com",
       subject: "Welcome to CODEBASICS",
       text: req.body.message,
     };

@@ -5,12 +5,6 @@
 			<hr />
 		</div>
 	</div>
-	{{!-- <div class="row head1">
-		<div class="col-md-4">
-			<h1 class="text"><a href="#">CODEBASICS.COM<br /><span class="h1-small">Online Portal</span></a></h1>
-		</div>
-		<div class="col-md-8"></div>
-	</div> --}}
 
 	<div class="row justify-content-center rowOne dash">
 		<div class="col-sm-1"></div>
@@ -31,9 +25,7 @@
 			<div class="input-group mx-auto">
 				<input type="text" class="form-control" placeholder="CODEBASICS.COM" aria-label="Recipient's username"
 					disabled>
-				{{!-- <div class="input-group-append">
-					<span class="input-group-text" id="basic-addon2">@example.com</span>
-				</div> --}}
+				
 			</div>
 			<p class="text3">
 				Welcome
@@ -65,7 +57,7 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-5">
 			<h3><strong>HTML:</strong></h3>
-			<h5><a href="https://html.com/">Resources</a></h5>
+			<h5><a href="https://html.com/" target="_blank">Resources</a></h5>
 			<ol id="unfinishedHtml">
 				{{#each Html}}
 				{{#unless this.dataValues.html_condition}}
@@ -89,7 +81,7 @@
 		</div>
 		<div class="col-md-5">
 			<h3><strong>CSS:</strong></h3>
-			<h5><a href="https://devdocs.io/css/">Resources</a></h5>
+			<h5><a href="https://devdocs.io/css/" target="_blank">Resources</a></h5>
 			<ol id="unfinishedCss">
 				{{#each Css}}
 				{{#unless this.dataValues.css_condition}}
@@ -144,7 +136,7 @@
 			<div class="col-md-1"></div>
 			<div class="col-md-5">
 				<h3><strong>Python:</strong></h3>
-				<h5><a href="https://wiki.python.org/moin/BeginnersGuide/Programmers">Resources</a></h5>
+				<h5><a href="https://wiki.python.org/moin/BeginnersGuide/Programmers" target="_blank">Resources</a></h5>
 				<ol id="unfinishedPython">
 					{{#each Python}}
 					{{#unless this.dataValues.python_condition}}
@@ -170,7 +162,7 @@
 
 			<div class="col-md-5">
 				<h3><strong>PHP:</strong></h3>
-				<h5><a href="https://www.php.net/manual/en/">Resources</a></h5>
+				<h5><a href="https://www.php.net/manual/en/" target="_blank">Resources</a></h5>
 				<ol id="unfinishedPhp">
 					{{#each Php}}
 					{{#unless this.dataValues.php_condition}}

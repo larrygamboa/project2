@@ -5,15 +5,6 @@ require("dotenv").config();
 const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
-  // host: "smtp-mail.outlook.com",
-  // secureConnection: false,
-  // port: 587,
-  // logger: true,
-  // debug: true,
-
-  // host: "smtp.gmail.com",
-  // port: 465,
-  // secure: true,
   service: "gmail",
   auth: {
     user: process.env.EMAIL,
@@ -76,27 +67,6 @@ module.exports = function(app) {
   });
 
   // ========== NODEMAILER ========== //
-  // const transporter = nodemailer.createTransport({
-  //   // host: "smtp-mail.outlook.com",
-  //   // secureConnection: false,
-  //   // port: 587,
-  //   // logger: true,
-  //   // debug: true,
-
-  //   // host: "smtp.gmail.com",
-  //   // port: 465,
-  //   // secure: true,
-  //   service: "gmail",
-  //   auth: {
-  //     user: process.env.EMAIL,
-  //     pass: process.env.PASS,
-  //   },
-  //   tls: {
-  //     // do not fail on invalid certs
-  //     rejectUnauthorized: true,
-  //     ciphers: "SSLv3",
-  //   },
-  // });
 
   // verify connection configuration
   transporter.verify(function(error, success) {

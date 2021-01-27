@@ -5,15 +5,6 @@ require("dotenv").config();
 const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
-  // host: "smtp-mail.outlook.com",
-  // secureConnection: false,
-  // port: 587,
-  // logger: true,
-  // debug: true,
-
-  // host: "smtp.gmail.com",
-  // port: 465,
-  // secure: true,
   service: "gmail",
   auth: {
     user: process.env.EMAIL,
@@ -76,27 +67,6 @@ module.exports = function(app) {
   });
 
   // ========== NODEMAILER ========== //
-  // const transporter = nodemailer.createTransport({
-  //   // host: "smtp-mail.outlook.com",
-  //   // secureConnection: false,
-  //   // port: 587,
-  //   // logger: true,
-  //   // debug: true,
-
-  //   // host: "smtp.gmail.com",
-  //   // port: 465,
-  //   // secure: true,
-  //   service: "gmail",
-  //   auth: {
-  //     user: process.env.EMAIL,
-  //     pass: process.env.PASS,
-  //   },
-  //   tls: {
-  //     // do not fail on invalid certs
-  //     rejectUnauthorized: true,
-  //     ciphers: "SSLv3",
-  //   },
-  // });
 
   // verify connection configuration
   transporter.verify(function(error, success) {
@@ -107,20 +77,7 @@ module.exports = function(app) {
     }
   });
 
-  const mailOptions = {
-    from: "codebasicsonlineportal@gmail.com", // sender address (who sends)
-    to: "feelthehousegroove@yahoo.com, ivan_e21@hotmail.com", // list of receivers (who receives)
-    subject: "Welcome to CODEBASICS.COM", // Subject line
-    text: "Hello world, this is the first email", // plaintext body
-  };
-
-  // send mail with defined transport object
-  transporter.sendMail(mailOptions, function(error, info) {
-    if (error) {
-      return console.log(error);
-    }
-    console.log("Message sent: " + info.response);
-  });
+  
 
   app.post("/api/mailer", (req, res) => {
     console.log("******", req.body);

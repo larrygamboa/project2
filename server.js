@@ -2,34 +2,9 @@
 const express = require("express");
 const session = require("express-session");
 var exphbs = require("express-handlebars");
-// const nodemailer = require("nodemailer");
-// require("dotenv").config();
 
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
-
-// Required dependencies
-// const mysql = require("mysql");
-// let connection;
-// // Connect to database
-// if (process.env.JAWSDB_URL) {
-//  connection = new Sequelize(process.env.JAWSDB_URL)
-// } else {
-//   connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: '27qweasd',
-//     database: 'passport_demo'
-//   });
-// }
-// // Make sure connection works
-// connection.connect(function(err) {
-//   if (err) {
-//     console.error("error connecting: " + err.stack);
-//     return;
-//   }
-//   console.log("connected as id " + connection.threadId);
-// });
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;

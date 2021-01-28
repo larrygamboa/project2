@@ -1,3 +1,4 @@
+ /* styles for text, links and forms withing the body */
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -64,10 +65,6 @@ p.text2 {
   min-height: 640px;
   padding: 4em;
 }
-
-/* .colorG {
-  background-color: rgb(104, 255, 34);
-} */
 
 .footer {
   background-color: teal;

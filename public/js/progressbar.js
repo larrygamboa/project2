@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // calculating percentage between finished and unfinished topic to populate progress bar
   const unfinishedHtml = $("#unfinishedHtml").children().length;
   const finishedHtml = $("#finishedHtml").children().length;
   const unfinishedCss = $("#unfinishedCss").children().length;

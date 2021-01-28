@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    // creating even for buttons to grab the topic's id to change it's status to "complete"
     $(".task-container").on("click", ".complete-html", function (event) {
       event.preventDefault();
       var id = $(this).data("id");

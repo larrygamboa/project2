@@ -1,4 +1,5 @@
 <div class="container containerMembers container-fluid">
+	{{!-- header starts --}}
 	<div class="row head1 text">
 		<div class="col-md-12 text">
 			<p class="text2">Learn web development in a collaborative setting</p>
@@ -6,6 +7,7 @@
 		</div>
 	</div>
 
+	{{!-- student dashboard with logout option --}}
 	<div class="row justify-content-center rowOne dash">
 		<div class="col-sm-1"></div>
 		<div class="col-sm-6">
@@ -25,9 +27,9 @@
 			<div class="input-group mx-auto">
 				<input type="text" class="form-control" placeholder="CODEBASICS.COM" aria-label="Recipient's username"
 					disabled>
-				
+
 			</div>
-			<p class="text3">
+			<p class="text4">
 				Welcome
 				<br><span class="member-name">your email</span>
 				<br>Full Stack Program
@@ -40,7 +42,7 @@
 	<br>
 
 
-
+	{{!-- tables with front-end development topics --}}
 	<div class="row task-container justify-content-center rowOne">
 		<div class="col-md-3"></div>
 		<div class="col-md-6">
@@ -74,7 +76,8 @@
 			</ol>
 			<form class="create-update-form" action="api/insertHtml" method="POST">
 				<div>
-					<textarea type="text" rows="1" cols="35" placeholder="Type in the name of the topic..." name="name"></textarea><br>
+					<textarea type="text" rows="1" cols="35" placeholder="Type in the name of the topic..."
+						name="name"></textarea><br>
 					<button class="btn btn-primary" type="submit">Add topic</button>
 				</div>
 			</form>
@@ -98,7 +101,8 @@
 			</ol>
 			<form class="create-update-form" action="api/insertCss" method="POST">
 				<div>
-					<textarea type="text" rows="1" cols="35" placeholder="Type in the name of the topic..." name="name"></textarea><br>
+					<textarea type="text" rows="1" cols="35" placeholder="Type in the name of the topic..."
+						name="name"></textarea><br>
 					<button class="btn btn-primary" type="submit">Add topic</button>
 				</div>
 			</form>
@@ -122,6 +126,7 @@
 	<br>
 	<hr>
 
+	{{!-- tables with back-end development topics --}}
 	<div class="row task-container justify-content-center">
 		<div class="col-md-3"></div>
 		<div class="col-md-6">
@@ -154,7 +159,8 @@
 				</ol>
 				<form class="create-update-form" action="api/insertPython" method="POST">
 					<div>
-						<textarea type="text" rows="1" cols="35" placeholder="Type in the name of the topic..." name="name"></textarea><br>
+						<textarea type="text" rows="1" cols="35" placeholder="Type in the name of the topic..."
+							name="name"></textarea><br>
 						<button class="btn btn-primary" type="submit">Add topic</button>
 					</div>
 				</form>
@@ -179,7 +185,8 @@
 				</ol>
 				<form class="create-update-form" action="api/insertPhp" method="POST">
 					<div>
-						<textarea type="text" rows="1" cols="35" placeholder="Type in the name of the topic..." name="name"></textarea><br>
+						<textarea type="text" rows="1" cols="35" placeholder="Type in the name of the topic..."
+							name="name"></textarea><br>
 						<button class="btn btn-primary" type="submit">Add topic</button>
 					</div>
 				</form>
@@ -260,11 +267,14 @@
 		</div>
 	</div>
 
-{{!-- footer starts --}}
-<div class="row  head1 text justify-content-center">
+	{{!-- footer starts --}}
+	<div class="row  head1 text justify-content-center">
 		<div class="col-md-3"></div>
-		<div class="col-md-6"> <p class="text3"><img src="/img/80.png" width="250px"><br><a href="#">CODEBASICS.COM<br /></a><span class="h1-small">Online Portal</span></p></div>
+		<div class="col-md-6">
+			<p class="text3"><img src="/img/80.png" width="250px"><br><a href="#">CODEBASICS.COM<br /></a><span
+					class="h1-small">Online Portal</span></p>
+		</div>
 		<div class="col-md-3"></div>
 
-</div>
+	</div>
 </div>

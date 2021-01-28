@@ -13,9 +13,9 @@ body#members-page {
 
 body {
   width: 100%;
-  /* font-family: "Roboto", sans-serif; */
 }
 
+/* styles for heading and text withing the navbar/header */
 .head1 {
   background-color: black;
   color: white;
@@ -41,35 +41,6 @@ h1.text a {
 
 .text {
   color: rgb(230, 227, 227);
-}
-
-p.text2 {
-  /* color: rgb(189, 182, 182); */
-  color: rgb(250, 233, 135);
-  font-family: "Libre Baskerville", serif;
-  font-size: 1.5em;
-  margin-top: 1em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-p.text3 {
-  font-family: "Libre Baskerville", serif;
-  font-size: 1em;
-  text-align: left;
-  padding-left: 0.8em;
-  padding-top: 0.5em;
-  line-height: 2em;
-}
-
-p.text3 {
-  color: rgb(250, 233, 135);
-  font-family: "Libre Baskerville", serif;
-  font-size: 1.5em;
-  margin-top: 1em;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 1em;
 }
 
 .row.scroll {
@@ -115,6 +86,47 @@ a.navbar-brand:hover {
   font-size: 2rem;
 }
 
+.col-sm-3.credentials {
+  background-color: rgb(226, 226, 226);
+  color: rgb(0, 0, 0);
+  font-family: "Libre Baskerville", serif;
+  font-size: 1em;
+  margin-top: -1em;
+  margin-bottom: -1.5em;
+  text-align: left;
+  padding: 2rem;
+}
+
+/* styles for text within the body and table rows  */
+p.text2 {
+  /* color: rgb(189, 182, 182); */
+  color: rgb(250, 233, 135);
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.5em;
+  margin-top: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+p.text4 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1em;
+  text-align: left;
+  padding-left: 0.8em;
+  padding-top: 0.5em;
+  line-height: 2em;
+}
+
+p.text3 {
+  color: rgb(250, 233, 135);
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.5em;
+  margin-top: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1em;
+}
+
 p.unfinished {
   font-size: 1.2em;
 }
@@ -142,14 +154,4 @@ div.progress.progressbar {
   background-color: rgb(68, 121, 218);
 }
 
-.col-sm-3.credentials {
-  background-color: rgb(226, 226, 226);
-  color: rgb(0, 0, 0);
-  font-family: "Libre Baskerville", serif;
-  font-size: 1em;
-  margin-top: -1em;
-  margin-bottom: -1.5em;
-  text-align: left;
-  padding: 2rem;
-}
 

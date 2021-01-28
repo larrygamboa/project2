@@ -24,7 +24,7 @@ Inside the folder `Config` there is a file `config.json` with a json object cont
 
 ## Usage 
 
-How the student uses the app? Login, add topics, add activities, complete then, mention progress bar and nodemailer
+How the student uses the app? Login, add topics, add activities, complete. then, mention progress bar and nodemailer
 
 
 ### Contributors

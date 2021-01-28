@@ -1,5 +1,6 @@
 USE passport_demo;
 
+-- populating tables to be shown on the members page
 INSERT INTO html (html_name, html_condition)
 VALUES ("HTML Elements: headings, paragraphs and links", false),
     ("HTML images, video and audio content", false),

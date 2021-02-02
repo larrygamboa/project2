@@ -11,10 +11,10 @@
   * [License](#License)
 
 ## Description
-This application allows students to create an account by signing up with an email and a password and then log into the account to access the information about topics that they want to study that could be marked as "completed" and the percentage of completion will be displayed in the progress bar. The app implements a variety of technologies and programming languages such as JavaScript, jQuery, HTML, CSS, SQL, API requests, Ajax calls, Express.js, Node.js, Passport.js, Sequelize and Bcrypt. The repository is organized according to MVC framework standards. This full-stack app also introduces simple and intuitive interface.
+This application allows students to create an account by signing up with an email and a password and then log into the account to access the information about topics that they want to study that could be marked as "completed" and the percentage of completion will be displayed in the progress bar. The app implements a variety of technologies and programming languages such as JavaScript, jQuery, HTML, CSS, SQL, API requests, Ajax calls, Express.js, Node.js, Passport.js, Sequelize, Nodemailer and Bcrypt. The repository is organized according to MVC framework standards. This full-stack app also introduces simple and intuitive interface.
 
 ## Installation
-To install this application the user will need to install Node.js and MySQL Workbench, then initialize the folder containing the application by typing `npm init -y` and `npm i` in the command line to install required dependencies such as `mysql, sequelize, fs, path, bcrypt, express, passport` mentioned in the `package.json` file that holds various metadata that's relevant to the project. Installing those modules will produce the node_modules folder that is like a cache for the external modules and Nodejs is trained to look for them there.
+To install this application the user will need to install Node.js and MySQL Workbench, then initialize the folder containing the application by typing `npm init -y` and `npm i` in the command line to install required dependencies such as `dotenv, mysql, sequelize, fs, path, bcrypt, express, passport` mentioned in the `package.json` file that holds various metadata that's relevant to the project. Installing those modules will produce the node_modules folder that is like a cache for the external modules and Nodejs is trained to look for them there. The environmental variables are stored in `.env` file and protected with `dotenv` package.
  <br>
 Inside the folder `Config` there is a file `config.json` with a json object containing information about MySQL connection: username, password, name of the database. The name of the database is the same name has to match with the one the user will use in the Workbench, also the  username and password need to be edited to access the data.
 
@@ -68,7 +68,7 @@ Then, after completing certain topics(for example №5 from HTML table and №5 
 
 The Back-end development section work the same easy intuitive way. 
 <br>
-A new technology The Nodemailer library was implemented for the students to send their questions straigt to the Codebasics.com official email. The user just need to fill up the form with his name, email and  the message. After clicking green button "Send message" the nodemailer function will direct it to the email indicated on line 183 in `api-routes.js` file:
+A new technology - The Nodemailer library was implemented for the students to send their questions straigt to the Codebasics.com official email. Nodemailer is a single module with zero dependencies for Node.js, designed for sending emails. Its main features include: platform-independence, security, Unicode support, HTML content and embedded image attachments, different transport methods besides SMTP support.The user just need to fill up the form with his name, email and  the message. After clicking green button "Send message" the nodemailer function will direct it to the email indicated on line 183 in `api-routes.js` file:
 <br>
 
 ![Codebasics email](./public/img/s9.jpg) 

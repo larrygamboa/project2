@@ -33,7 +33,7 @@ module.exports = function(app) {
     });
   });
 
-  // Route for signing up a user. The user's password is automatically hashed and stored securely 
+  // Route for signing up a user. The user's password is automatically hashed and stored securely
   //  If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
   app.post("/api/signup", (req, res) => {
@@ -75,92 +75,105 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, (req, res) => {
     // grabing data stored in topics tables to populate members page
     db.Html.findAll({}).then(function(dbHtml) {
-      db.Css.findAll({}).then(function(dbCss) { 
-                  db.Python.findAll({}).then(function(dbPython) {
-                         db.Php.findAll({}).then(function(dbPhp) {
-           res.render("members", {Html: dbHtml, Css: dbCss, Python: dbPython, Php: dbPhp})
-      })
-    })
-  }) 
-  });
+      db.Css.findAll({}).then(function(dbCss) {
+        db.Python.findAll({}).then(function(dbPython) {
+          db.Php.findAll({}).then(function(dbPhp) {
+            res.render("members", {
+              Html: dbHtml,
+              Css: dbCss,
+              Python: dbPython,
+              Php: dbPhp,
+            });
+          });
+        });
+      });
+    });
   });
 
   // routes to insert new topics
   app.post("/api/insertHtml", function(req, res) {
-    db.Html.create({html_name: req.body.name, html_condition: false}).then(function() {
+    db.Html.create({ html_name: req.body.name, html_condition: false }).then(
+      function() {
         res.redirect("/members");
-      });
+      }
+    );
   });
-  
+
   app.post("/api/insertCss", function(req, res) {
-    db.Css.create({css_name: req.body.name, css_condition: false}).then(function() {
+    db.Css.create({ css_name: req.body.name, css_condition: false }).then(
+      function() {
         res.redirect("/members");
-      });
+      }
+    );
   });
 
   app.post("/api/insertPhp", function(req, res) {
-    db.Php.create({php_name: req.body.name, php_condition: false}).then(function() {
+    db.Php.create({ php_name: req.body.name, php_condition: false }).then(
+      function() {
         res.redirect("/members");
-      });
+      }
+    );
   });
 
   app.post("/api/insertPython", function(req, res) {
-    db.Python.create({python_name: req.body.name, python_condition: false}).then(function() {
-        res.redirect("/members");
-      });
+    db.Python.create({
+      python_name: req.body.name,
+      python_condition: false,
+    }).then(function() {
+      res.redirect("/members");
+    });
   });
 
   // routes to update the condition of the topics to move them to "complete" section
   app.put("/api/updateHtml/:id", function(req, res) {
     db.Html.update(
-      {html_condition: true},
+      { html_condition: true },
       {
         where: {
-          id: req.params.id
-        }
-      }).then(function() {
-       
-        res.sendStatus(200);
+          id: req.params.id,
+        },
+      }
+    ).then(function() {
+      res.sendStatus(200);
     });
   });
 
-
   app.put("/api/updateCss/:id", function(req, res) {
     db.Css.update(
-      {css_condition: true},
+      { css_condition: true },
       {
         where: {
-          id: req.params.id
-        }
-      }).then(function() {
-       
-        res.sendStatus(200);
+          id: req.params.id,
+        },
+      }
+    ).then(function() {
+      res.sendStatus(200);
     });
   });
 
   app.put("/api/updatePhp/:id", function(req, res) {
     db.Php.update(
-      {php_condition: true},
+      { php_condition: true },
       {
         where: {
-          id: req.params.id
-        }
-      }).then(function() {
-       
-        res.sendStatus(200);
+          id: req.params.id,
+        },
+      }
+    ).then(function() {
+      res.sendStatus(200);
     });
   });
 
   app.put("/api/updatePython/:id", function(req, res) {
     db.Python.update(
-      {python_condition: true},
+      { python_condition: true },
       {
         where: {
-          id: req.params.id
-        }
-      }).then(function() {
-       
-        res.sendStatus(200);
+          id: req.params.id,
+        },
+      }
+    ).then(function() {
+      res.sendStatus(200);
     });
   });
 
@@ -175,8 +188,7 @@ module.exports = function(app) {
     }
   });
 
-  
-  // routes to gather entered info to send the email 
+  // routes to gather entered info to send the email
   app.post("/api/mailer", (req, res) => {
     const mailOptions = {
       from: req.body.email,
@@ -184,7 +196,7 @@ module.exports = function(app) {
       subject: "Welcome to CODEBASICS",
       text: req.body.message,
     };
-    
+
     transporter.sendMail(mailOptions, (err) => {
       if (err) {
         console.log("Error has occured");
@@ -194,7 +206,7 @@ module.exports = function(app) {
     });
 
     res.json({
-      success: true
+      success: true,
     });
   });
   // ========== END NODEMAILER ========== //
